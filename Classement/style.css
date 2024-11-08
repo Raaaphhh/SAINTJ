@@ -10,23 +10,6 @@ body{
     font-size: 20px;
 }
 
-.case1 {
-    border: 2px solid black;
-    width: 20%;
-    text-align: center;
-    float: right;
-    margin-right: 20%;
-}
-
-.case2 {
-    border: 2px solid black;
-    width: 20%;
-    text-align: center;
-    float: left;
-    margin-left: 20%;
-    padding-top: 15;
-}
-
 .acceuil{
     position: fixed;
     bottom: 0;

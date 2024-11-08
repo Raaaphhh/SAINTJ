@@ -5,3 +5,8 @@
     justify-content: center;
     height: 50vh; /* Assurez-vous que le conteneur prend toute la hauteur de la vue */
 }
+
+header{
+    background-color: black;
+    color : white; 
+}
