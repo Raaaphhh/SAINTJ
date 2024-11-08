@@ -71,7 +71,7 @@ function displayUserScore() {
                 if (snapshot.exists()) {
                     const userData = snapshot.val();
                     const scoreDisplay = document.getElementById('scoreDisplay');
-                    scoreDisplay.textContent = `Votre score : ${userData.score}`;
+                    scoreDisplay.textContent = `${userData.score}`;
                 } else {
                     console.log("Aucune donnée trouvée pour l'utilisateur.");
                 }
