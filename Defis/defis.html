@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu Vertical de Défis</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="module" src="script.js"></script>
+</head>
+<body>
+    <ul class="menu">
+        <li class="menu-item" data-category="easy">Facile
+            <div id="easy" class="challenges">
+                <label><input type="checkbox" data-points="10" id="easy-1"> Défi facile 1</label>
+                <label><input type="checkbox" data-points="10" id="easy-2"> Défi facile 2</label>
+                <label><input type="checkbox" data-points="10" id="easy-3"> Défi facile 3</label>
+            </div>
+        </li>
+        <li class="menu-item" data-category="medium">Moyen
+            <div id="medium" class="challenges">
+                <label><input type="checkbox" data-points="20" id="medium-1"> Défi moyen 1</label>
+                <label><input type="checkbox" data-points="20" id="medium-2"> Défi moyen 2</label>
+                <label><input type="checkbox" data-points="20" id="medium-3"> Défi moyen 3</label>
+            </div>
+        </li>
+        <li class="menu-item" data-category="hard">Difficile
+            <div id="hard" class="challenges">
+                <label><input type="checkbox" data-points="30" id="hard-1"> Défi difficile 1</label>
+                <label><input type="checkbox" data-points="30" id="hard-2"> Défi difficile 2</label>
+                <label><input type="checkbox" data-points="30" id="hard-3"> Défi difficile 3</label>
+            </div>
+        </li>
+        <li class="menu-item" data-category="extreme">Extrêmement Difficile
+            <div id="extreme" class="challenges">
+                <label><input type="checkbox" data-points="50" id="extreme-1"> Défi extrêmement difficile 1</label>
+                <label><input type="checkbox" data-points="50" id="extreme-2"> Défi extrêmement difficile 2</label>
+                <label><input type="checkbox" data-points="50" id="extreme-3"> Défi extrêmement difficile 3</label>
+            </div>
+        </li>
+    </ul>
+
+    <div class="back-button-container">
+        <a href="../Pagemenu/pagemenu.html" class="back-button">Retour à la page d'accueil</a>
+    </div>
+</body>
+</html>
