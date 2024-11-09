@@ -1,11 +1,9 @@
-/* h1.TitrePrincipale{
-    text-align: center;
-    color: azure;
-    clear: both;
-} */
+
 
 header{
     background-color: black;
+    color: azure;
+    text-align: center;
     padding: 30px;
 }
 

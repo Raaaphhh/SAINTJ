@@ -1,5 +1,6 @@
 const slideshow = document.getElementById('slideshow');
 const slides = document.querySelector('.slides');
+const totalSlides = document.querySelectorAll('.slide').length;
 let isDragging = false;
 let startPos = 0;
 let currentTranslate = 0;
@@ -29,7 +30,7 @@ function endDrag() {
     cancelAnimationFrame(animationID);
     const movedBy = currentTranslate - prevTranslate;
 
-    if (movedBy < -100 && currentIndex < document.querySelectorAll('.slide').length - 1) currentIndex += 1;
+    if (movedBy < -100 && currentIndex < totalSlides - 1) currentIndex += 1;
     if (movedBy > 100 && currentIndex > 0) currentIndex -= 1;
 
     setPositionByIndex();
@@ -64,9 +65,9 @@ function setPositionByIndex() {
 
 function startAutoSlide() {
     autoSlideInterval = setInterval(() => {
-    currentIndex = (currentIndex + 1) % document.querySelectorAll('.slide').length;
+    currentIndex = (currentIndex + 1) % totalSlides;
     setPositionByIndex();
-    }, 4243); // Change slide every 3 seconds
+    }, 7000); // Change slide every 3 seconds
 }
 
 // Start auto-slide on page load
