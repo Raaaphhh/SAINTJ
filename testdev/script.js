@@ -1,13 +1,11 @@
 const diaporama = document.querySelector('.diaporama');
-
+const diaporamaContainer = document.querySelector('.diaporama-container');
+const images = diaporama.querySelectorAll('img');
 let isDragging = false;
 let startPos = 0;
 let currentTranslate = 0;
 let prevTranslate = 0;
 let currentIndex = 0;
-let animationID;
-const images = diaporama.querySelectorAll('img');
-const slideWidth = diaporama.clientWidth;
 
 diaporama.addEventListener('mousedown', startDrag);
 diaporama.addEventListener('touchstart', startDrag, { passive: true });
@@ -20,34 +18,25 @@ diaporama.addEventListener('mouseleave', endDrag);
 function startDrag(event) {
     isDragging = true;
     startPos = getPositionX(event);
-    animationID = requestAnimationFrame(animation);
-    diaporama.style.cursor = 'grabbing';
+    diaporama.style.transition = 'none';
 }
 
 function endDrag() {
     if (!isDragging) return;
     isDragging = false;
-    cancelAnimationFrame(animationID);
-
     const movedBy = currentTranslate - prevTranslate;
+
     if (movedBy < -50 && currentIndex < images.length - 1) currentIndex++;
     if (movedBy > 50 && currentIndex > 0) currentIndex--;
 
     setPositionByIndex();
-    diaporama.style.cursor = 'grab';
 }
 
 function drag(event) {
     if (!isDragging) return;
-    event.preventDefault();
     const currentPosition = getPositionX(event);
     currentTranslate = prevTranslate + currentPosition - startPos;
     setSliderPosition();
-}
-
-function animation() {
-    setSliderPosition();
-    if (isDragging) requestAnimationFrame(animation);
 }
 
 function getPositionX(event) {
@@ -59,13 +48,14 @@ function setSliderPosition() {
 }
 
 function setPositionByIndex() {
-    currentTranslate = currentIndex * -slideWidth;
+    currentTranslate = currentIndex * -diaporamaContainer.clientWidth;
     prevTranslate = currentTranslate;
+    diaporama.style.transition = 'transform 0.3s ease';
     setSliderPosition();
 }
 
 window.addEventListener('resize', () => {
-    currentTranslate = currentIndex * -diaporama.clientWidth;
+    currentTranslate = currentIndex * -diaporamaContainer.clientWidth;
     prevTranslate = currentTranslate;
     setSliderPosition();
 });
