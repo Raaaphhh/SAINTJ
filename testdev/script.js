@@ -5,6 +5,7 @@ let startPos = 0;
 let currentTranslate = 0;
 let prevTranslate = 0;
 let currentIndex = 0;
+let animationID;
 
 diaporama.addEventListener('mousedown', startDrag);
 diaporama.addEventListener('touchstart', startDrag, { passive: true });
@@ -17,12 +18,14 @@ diaporama.addEventListener('mouseleave', endDrag);
 function startDrag(event) {
     isDragging = true;
     startPos = getPositionX(event);
+    animationID = requestAnimationFrame(animation);
     diaporama.style.cursor = 'grabbing';
 }
 
 function endDrag() {
     if (!isDragging) return;
     isDragging = false;
+    cancelAnimationFrame(animationID);
 
     const movedBy = currentTranslate - prevTranslate;
     if (movedBy < -100 && currentIndex < diaporama.children.length - 1) currentIndex++;
@@ -37,7 +40,11 @@ function drag(event) {
     event.preventDefault();
     const currentPosition = getPositionX(event);
     currentTranslate = prevTranslate + currentPosition - startPos;
+}
+
+function animation() {
     setSliderPosition();
+    if (isDragging) requestAnimationFrame(animation);
 }
 
 function getPositionX(event) {
