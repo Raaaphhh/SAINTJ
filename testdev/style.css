@@ -20,11 +20,34 @@ body {
 
 .diaporama {
     display: flex;
-    transition: transform 0.3s ease-in-out;
+    transition: transform 0.3s ease;
+    will-change: transform;
 }
 
 .diaporama img {
     width: 100%;
     user-select: none;
-    cursor: grab;
+    flex-shrink: 0;
+    pointer-events: none;
+}
+
+.arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 10;
+    font-size: 24px;
+}
+
+.arrow-left {
+    left: 10px;
+}
+
+.arrow-right {
+    right: 10px;
 }
