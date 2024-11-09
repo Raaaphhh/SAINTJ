@@ -1,24 +1,121 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Diaporama Glissant</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>Diaporama de Photos</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      background-color: #121212;
+      color: white;
+    }
+
+    .slideshow {
+      position: relative;
+      width: 80%;
+      max-width: 600px;
+      overflow: hidden;
+      border-radius: 10px;
+    }
+
+    .slides {
+      display: flex;
+      transition: transform 0.5s ease-in-out;
+    }
+
+    .slide {
+      min-width: 100%;
+      transition: opacity 1s ease;
+    }
+
+    .slide img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+    }
+  </style>
 </head>
 <body>
-    <div class="diaporama-container">
-        <button class="arrow arrow-left">&#8249;</button>
-        <button class="arrow arrow-right">&#8250;</button>
-        <div class="diaporama">
-            <img src="IMG_0034.JPEG" alt="Photo 1">
-            <img src="IMG_8140.JPG" alt="Photo 2">
-            <img src="IMG_9880.JPEG" alt="Photo 3">
-            <img src="IMG_9882.JPEG" alt="Photo 4">
-            <img src="IMG_9899.JPEG" alt="Photo 4">
-
-        </div>
+  <div class="slideshow" id="slideshow">
+    <div class="slides">
+      <div class="slide"><img src="IMG_0034.JPEG" alt="Photo 1"></div>
+      <div class="slide"><img src="IMG_8140.JPG" alt="Photo 2"></div>
+      <div class="slide"><img src="IMG_9880.JPEG" alt="Photo 3"></div>
+      <!-- Ajoutez autant de photos que vous souhaitez -->
     </div>
-    <script src="script.js"></script>
+  </div>
+  <script>
+    const slideshow = document.getElementById('slideshow');
+    const slides = document.querySelector('.slides');
+    let isDragging = false;
+    let startPos = 0;
+    let currentTranslate = 0;
+    let prevTranslate = 0;
+    let animationID;
+    let currentIndex = 0;
+
+    slideshow.addEventListener('mousedown', startDrag);
+    slideshow.addEventListener('mouseup', endDrag);
+    slideshow.addEventListener('mousemove', drag);
+    slideshow.addEventListener('mouseleave', endDrag);
+
+    slideshow.addEventListener('touchstart', startDrag);
+    slideshow.addEventListener('touchend', endDrag);
+    slideshow.addEventListener('touchmove', drag);
+
+    function startDrag(event) {
+      isDragging = true;
+      startPos = getPositionX(event);
+      animationID = requestAnimationFrame(animation);
+    }
+
+    function endDrag() {
+      isDragging = false;
+      cancelAnimationFrame(animationID);
+      const movedBy = currentTranslate - prevTranslate;
+
+      if (movedBy < -100 && currentIndex < document.querySelectorAll('.slide').length - 1) currentIndex += 1;
+      if (movedBy > 100 && currentIndex > 0) currentIndex -= 1;
+
+      setPositionByIndex();
+    }
+
+    function drag(event) {
+      if (isDragging) {
+        const currentPosition = getPositionX(event);
+        currentTranslate = prevTranslate + currentPosition - startPos;
+      }
+    }
+
+    function getPositionX(event) {
+      return event.type.includes('mouse') ? event.pageX : event.touches[0].clientX;
+    }
+
+    function animation() {
+      setSliderPosition();
+      if (isDragging) requestAnimationFrame(animation);
+    }
+
+    function setSliderPosition() {
+      slides.style.transform = `translateX(${currentTranslate}px)`;
+    }
+
+    function setPositionByIndex() {
+      currentTranslate = currentIndex * -slideshow.offsetWidth;
+      prevTranslate = currentTranslate;
+      setSliderPosition();
+    }
+  </script>
 </body>
 </html>
