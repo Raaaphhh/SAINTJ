@@ -6,6 +6,8 @@ let currentTranslate = 0;
 let prevTranslate = 0;
 let currentIndex = 0;
 let animationID;
+const images = diaporama.querySelectorAll('img');
+const slideWidth = diaporama.clientWidth;
 
 diaporama.addEventListener('mousedown', startDrag);
 diaporama.addEventListener('touchstart', startDrag, { passive: true });
@@ -28,8 +30,8 @@ function endDrag() {
     cancelAnimationFrame(animationID);
 
     const movedBy = currentTranslate - prevTranslate;
-    if (movedBy < -100 && currentIndex < diaporama.children.length - 1) currentIndex++;
-    if (movedBy > 100 && currentIndex > 0) currentIndex--;
+    if (movedBy < -50 && currentIndex < images.length - 1) currentIndex++;
+    if (movedBy > 50 && currentIndex > 0) currentIndex--;
 
     setPositionByIndex();
     diaporama.style.cursor = 'grab';
@@ -57,13 +59,13 @@ function setSliderPosition() {
 }
 
 function setPositionByIndex() {
-    currentTranslate = currentIndex * -diaporama.clientWidth / diaporama.children.length;
+    currentTranslate = currentIndex * -slideWidth;
     prevTranslate = currentTranslate;
     setSliderPosition();
 }
 
 window.addEventListener('resize', () => {
-    currentTranslate = currentIndex * -diaporama.clientWidth / diaporama.children.length;
+    currentTranslate = currentIndex * -diaporama.clientWidth;
     prevTranslate = currentTranslate;
     setSliderPosition();
 });
