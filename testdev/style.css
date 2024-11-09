@@ -1,0 +1,30 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #333;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+}
+
+.diaporama-container {
+    width: 80%;
+    max-width: 600px;
+    overflow: hidden;
+    border-radius: 10px;
+    position: relative;
+}
+
+.diaporama {
+    display: flex;
+    transition: transform 0.3s ease-in-out;
+}
+
+.diaporama img {
+    width: 100%;
+    user-select: none;
+    cursor: grab;
+}

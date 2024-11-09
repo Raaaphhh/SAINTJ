@@ -38,7 +38,7 @@ window.login = function() {
     .then((userCredential) => {
         console.log("Connexion réussie :", userCredential.user);
         // Redirection vers la page de classement après connexion réussie
-        window.location.href = '../Defis/defis.html';
+        window.location.href = '../Pagemenu/pagemenu.html';
     })
     .catch((error) => {
         console.error("Erreur de connexion :", error.message);

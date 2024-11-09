@@ -1,8 +1,8 @@
-h1.TitrePrincipale{
+/* h1.TitrePrincipale{
     text-align: center;
     color: azure;
     clear: both;
-}
+} */
 
 header{
     background-color: black;
@@ -42,6 +42,7 @@ footer{
 }
 
 .btnco:hover {
+    
     background-color: grey;
 }
 
@@ -56,3 +57,11 @@ footer{
 .btnreg:hover {
     background-color: grey;
 }
+
+
+/* test diaporama */
+/* test diaporama */
+/* test diaporama */
+
+
+
