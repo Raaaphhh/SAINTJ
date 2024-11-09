@@ -3,7 +3,7 @@ Page Acceuil
 dans le header : 
 - Page Accueil ---> |1er partie (main)|en haut a gauche logo stJ puis a coté du logo "accueil"
 
-    En haut a droite
+    En dessous titre page
     Bouton inscription : lors 1er register, rentrer des inforamtions (Username, email, mdp ) ---> case accepter le contrat + lien vers le contrat sur le texte
     Bouton connexion a coté sur la meme ligne
 
