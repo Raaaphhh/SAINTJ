@@ -6,6 +6,7 @@ let currentTranslate = 0;
 let prevTranslate = 0;
 let currentIndex = 0;
 let animationID;
+const slideWidth = diaporama.clientWidth / diaporama.children.length;
 
 diaporama.addEventListener('mousedown', startDrag);
 diaporama.addEventListener('touchstart', startDrag, { passive: true });
@@ -28,8 +29,8 @@ function endDrag() {
     cancelAnimationFrame(animationID);
 
     const movedBy = currentTranslate - prevTranslate;
-    if (movedBy < -100 && currentIndex < diaporama.children.length - 1) currentIndex++;
-    if (movedBy > 100 && currentIndex > 0) currentIndex--;
+    if (movedBy < -slideWidth / 2 && currentIndex < diaporama.children.length - 1) currentIndex++;
+    if (movedBy > slideWidth / 2 && currentIndex > 0) currentIndex--;
 
     setPositionByIndex();
     diaporama.style.cursor = 'grab';
@@ -56,7 +57,13 @@ function setSliderPosition() {
 }
 
 function setPositionByIndex() {
-    currentTranslate = currentIndex * -diaporama.clientWidth;
+    currentTranslate = currentIndex * -slideWidth;
     prevTranslate = currentTranslate;
     setSliderPosition();
 }
+
+window.addEventListener('resize', () => {
+    currentTranslate = currentIndex * -diaporama.clientWidth;
+    prevTranslate = currentTranslate;
+    setSliderPosition();
+});
