@@ -1,5 +1,21 @@
-Idée de developement
+Page Acceuil
 
-- Faire une partie election de gilles
+dans le header : 
+- Page Accueil ---> |1er partie (main)|en haut a gauche logo stJ puis a coté du logo "accueil"
 
-- 
+    En haut a droite
+    Bouton inscription : lors 1er register, rentrer des inforamtions (Username, email, mdp ) ---> case accepter le contrat + lien vers le contrat sur le texte
+    Bouton connexion a coté sur la meme ligne
+
+|2 partie 
+- photo / recap du dernier st gilles (Diaporama horizontale)
+Juste en dessous Nom du vainceur (avec coeur (ref vie de stcroixde vie)) au dessus du nom ---> lien vers le insta du vainqueur 
+
+|3 partie (footer)
+en bas droite = texte "qui on est"
+milliey = tout droit réservé + contact 
+credit = "@RD & AP"
+
+
+Page defis : 
+- (optionel) ajouter une animation sur la difficulté du defis (facile, moyen ...) pour voir les points correspondant
