@@ -75,20 +75,28 @@ startAutoSlide();
 
 const menuToggle = document.getElementById('menu-toggle');
 const dropdownMenu = document.getElementById('dropdown-menu');
+let isMenuOpen = false; // Indicateur pour l'état du menu
 
 menuToggle.addEventListener('click', (event) => {
     event.stopPropagation(); // Empêche la propagation de l'événement
 
-    // Ajoute ou supprime la classe 'open' pour gérer l'affichage
-    dropdownMenu.classList.toggle('open');
+    // Toggle de l'état du menu
+    isMenuOpen = !isMenuOpen;
+    if (isMenuOpen) {
+        dropdownMenu.style.display = 'block';
+    } else {
+        dropdownMenu.style.display = 'none';
+    }
 });
 
 // Fermer le menu si on clique en dehors
 document.addEventListener('click', (event) => {
-    if (!menuToggle.contains(event.target) && dropdownMenu.classList.contains('open')) {
-        dropdownMenu.classList.remove('open');
+    if (isMenuOpen && !menuToggle.contains(event.target)) {
+        dropdownMenu.style.display = 'none';
+        isMenuOpen = false; // Réinitialise l'état du menu
     }
 });
+
 
 
 
