@@ -76,11 +76,16 @@ startAutoSlide();
 const menuToggle = document.getElementById('menu-toggle');
 const dropdownMenu = document.getElementById('dropdown-menu');
 
-menuToggle.addEventListener('click', () => {
+function toggleMenu() {
     if (dropdownMenu.style.display === 'none' || dropdownMenu.style.display === '') {
         dropdownMenu.style.display = 'block';
     } else {
         dropdownMenu.style.display = 'none';
     }
-});
+}
+
+// Ajoute les événements pour le clic et le toucher
+menuToggle.addEventListener('click', toggleMenu);
+menuToggle.addEventListener('touchstart', toggleMenu);
+
 
