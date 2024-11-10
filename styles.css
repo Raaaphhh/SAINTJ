@@ -59,9 +59,10 @@ footer{
   position: fixed;
   bottom: 0;
   width: 100%;
-  background-color: black;
+  background-color: #1a1a1a;
   padding: 10px;
   text-align: center;
+  font-family: 'Bowlby One SC', cursive;
 }
 
 .btnco{
@@ -95,11 +96,12 @@ footer{
 
 .winner{
   color: white;
-  font-size: 20px;
+  font-size: 11px;
   font-weight: bold;
   text-align: center;
   margin-top: 20px;
   margin-bottom: 100px;
+  font-family: 'Bowlby One SC', cursive;
 }
 
 .menu-icon {
@@ -111,7 +113,7 @@ footer{
   flex-direction: column;
   justify-content: space-between;
   height: 24px;
-  z-index: 15; /* Assurez-vous que le menu est au-dessus du contenu */
+  z-index: 15; 
 }
 
 .bar {
