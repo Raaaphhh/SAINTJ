@@ -72,3 +72,13 @@ function startAutoSlide() {
 
 // Start auto-slide on page load
 startAutoSlide();
+
+document.addEventListener("DOMContentLoaded", function () {
+    const menuToggle = document.getElementById("menu-toggle");
+    const menu = document.getElementById("menu");
+
+    menuToggle.addEventListener("click", function () {
+      menu.classList.toggle("active");
+      menu.style.display = menu.style.display === "block" ? "none" : "block";
+    });
+  });

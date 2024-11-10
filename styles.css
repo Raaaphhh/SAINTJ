@@ -91,4 +91,70 @@
     margin-top: 20px;
     margin-bottom: 100px;
   }
-  
+
+  /* Menu Toggle Styles */
+/* Menu Toggle Styles */
+.menu-toggle {
+  cursor: pointer;
+  display: flex; /* assurez-vous que le bouton est visible */
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 25px;
+  position: fixed;
+  right: 20px;
+  top: 20px;
+  z-index: 11;
+}
+
+.bar {
+  height: 4px; /* augmenter la hauteur pour mieux les voir */
+  width: 100%;
+  background-color: white; /* assurez-vous qu'elles soient visibles */
+  border-radius: 10px;
+}
+
+/* Menu Styles */
+.menu {
+  display: none;
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 200px;
+  height: 100vh;
+  background-color: #1a1a1a;
+  z-index: 10;
+  padding-top: 80px;
+  text-align: center;
+}
+
+.menu ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.menu ul li {
+  margin: 20px 0;
+}
+
+.menu ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: flex;
+  }
+
+  header {
+    padding-right: 60px;
+  }
+
+  .btnco, .btnreg {
+    display: none;
+  }
+}
+
