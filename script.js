@@ -76,16 +76,21 @@ startAutoSlide();
 const menuToggle = document.getElementById('menu-toggle');
 const dropdownMenu = document.getElementById('dropdown-menu');
 
-function toggleMenu() {
-    if (dropdownMenu.style.display === 'none' || dropdownMenu.style.display === '') {
-        dropdownMenu.style.display = 'block';
+menuToggle.addEventListener('click', (event) => {
+    event.stopPropagation(); // Empêche la propagation de l'événement pour éviter un déclenchement multiple
+
+    if (dropdownMenu.style.display === 'block') {
+        dropdownMenu.style.display = 'none';
     } else {
+        dropdownMenu.style.display = 'block';
+    }
+});
+
+// Fermer le menu si on clique en dehors du menu
+document.addEventListener('click', (event) => {
+    if (dropdownMenu.style.display === 'block' && !menuToggle.contains(event.target)) {
         dropdownMenu.style.display = 'none';
     }
-}
-
-// Ajoute les événements pour le clic et le toucher
-menuToggle.addEventListener('click', toggleMenu);
-menuToggle.addEventListener('touchstart', toggleMenu);
+});
 
 
