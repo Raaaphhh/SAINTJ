@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Bowlby+One+SC&family=Bree+Serif&display=swap');
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -11,6 +13,10 @@ body {
   min-height: 100vh;
   background-color: black;
   color: white;
+}
+
+.t2{
+  font-family: 'Bowlby One SC', cursive;
 }
 
 header {
@@ -53,17 +59,19 @@ footer{
   position: fixed;
   bottom: 0;
   width: 100%;
-  background-color: #1a1a1a;
+  background-color: black;
   padding: 10px;
   text-align: center;
 }
 
 .btnco{
   /* float: right; */
-  border: 1px solid rgb(236, 232, 232);
+  border: 3px solid white;
+  color: white;
   border-radius: 16px;
   padding: 10px;
-  background-color: white;
+  background-color: black;
+  font-family: 'Bowlby One SC', cursive;
 }
 
 .btnco:hover {
@@ -72,11 +80,12 @@ footer{
 
 .btnreg{
   /* float: right; */
-  border: 1px solid rgb(236, 232, 232);
+  border: 3px solid black;
   border-radius: 16px;
   padding: 10px;
   /* margin-right: 40px; */
   background-color: white;
+  font-family: 'Bowlby One SC', cursive;
 }
 
 .btnreg:hover {
