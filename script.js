@@ -75,27 +75,44 @@ startAutoSlide();
 
 const menuToggle = document.getElementById('menu-toggle');
 const dropdownMenu = document.getElementById('dropdown-menu');
-let isMenuOpen = false; // Indicateur pour l'état du menu
 
-menuToggle.addEventListener('click', (event) => {
-    event.stopPropagation(); // Empêche la propagation de l'événement
-
-    // Toggle de l'état du menu
-    isMenuOpen = !isMenuOpen;
-    if (isMenuOpen) {
-        dropdownMenu.style.display = 'block';
+// Fonction pour gérer l'affichage du menu
+function toggleMenu() {
+    if (dropdownMenu.classList.contains('open')) {
+        dropdownMenu.classList.remove('open');
     } else {
-        dropdownMenu.style.display = 'none';
+        dropdownMenu.classList.add('open');
     }
+}
+
+// Ajoute les gestionnaires pour les événements de clic et de touch
+menuToggle.addEventListener('click', (event) => {
+    event.preventDefault();
+    event.stopPropagation();
+    toggleMenu();
+});
+
+menuToggle.addEventListener('touchstart', (event) => {
+    event.preventDefault();
+    event.stopPropagation();
+    toggleMenu();
 });
 
 // Fermer le menu si on clique en dehors
 document.addEventListener('click', (event) => {
-    if (isMenuOpen && !menuToggle.contains(event.target)) {
-        dropdownMenu.style.display = 'none';
-        isMenuOpen = false; // Réinitialise l'état du menu
+    if (!menuToggle.contains(event.target) && dropdownMenu.classList.contains('open')) {
+        dropdownMenu.classList.remove('open');
     }
 });
+
+// Fermer le menu si on touche en dehors (pour les mobiles)
+document.addEventListener('touchstart', (event) => {
+    if (!menuToggle.contains(event.target) && dropdownMenu.classList.contains('open')) {
+        dropdownMenu.classList.remove('open');
+    }
+});
+
+
 
 
 
