@@ -36,16 +36,12 @@ footer{
   font-family: 'Bowlby One SC', cursive;
 }
 
-.t2{
-  font-family: 'Bowlby One SC', cursive;
-}
-
 
 /* diaporama */
 /* diaporama */
 .slideshow {
   position: relative;
-  width: 30%;
+  width: 55%;
   max-width: 600px;
   overflow: hidden;
   border-radius: 10px;
@@ -105,15 +101,6 @@ footer{
 /* bouton co et insc */
 
 
-.winner{
-  color: white;
-  font-size: 11px;
-  font-weight: bold;
-  text-align: center;
-  margin-top: 20px;
-  margin-bottom: 100px;
-  font-family: 'Bowlby One SC', cursive;
-}
 
 
 /* Menu 3barres */
@@ -174,3 +161,20 @@ footer{
 /* Menu 3barres */
 /* Menu 3barres */
 
+
+
+/* texte */
+/* texte */
+.t2{
+  font-family: 'Bowlby One SC', cursive;
+}
+
+.winner{
+  color: white;
+  font-size: 11px;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 100px;
+  font-family: 'Bowlby One SC', cursive;
+}
