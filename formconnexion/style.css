@@ -1,0 +1,13 @@
+header{
+    text-align: center;
+}
+
+body{
+    align-items: center;
+}
+
+.connexion{
+    border: 2px solid black;
+    margin-left: 45%;
+    margin-right: 45%;
+}
