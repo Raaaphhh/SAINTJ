@@ -82,3 +82,13 @@
   .btnreg:hover {
     background-color: grey;
   }
+
+  .winner{
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 100px;
+  }
+  
