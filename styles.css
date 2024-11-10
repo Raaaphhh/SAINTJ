@@ -6,19 +6,6 @@
   padding: 0;
 }
 
-body {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  min-height: 100vh;
-  background-color: black;
-  color: white;
-}
-
-.t2{
-  font-family: 'Bowlby One SC', cursive;
-}
-
 header {
   width: 100%;
   background-color: #1a1a1a;
@@ -30,9 +17,35 @@ header {
   z-index: 10;
 }
 
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  background-color: black;
+  color: white;
+}
+
+footer{
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: #1a1a1a;
+  padding: 10px;
+  text-align: center;
+  font-family: 'Bowlby One SC', cursive;
+}
+
+.t2{
+  font-family: 'Bowlby One SC', cursive;
+}
+
+
+/* diaporama */
+/* diaporama */
 .slideshow {
   position: relative;
-  width: 70%;
+  width: 30%;
   max-width: 600px;
   overflow: hidden;
   border-radius: 10px;
@@ -54,17 +67,12 @@ header {
   height: auto;
   border-radius: 10px;
 }
+/* diaporama */
+/* diaporama */
 
-footer{
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-  background-color: #1a1a1a;
-  padding: 10px;
-  text-align: center;
-  font-family: 'Bowlby One SC', cursive;
-}
 
+/* bouton co et insc */
+/* bouton co et insc */
 .btnco{
   /* float: right; */
   border: 3px solid white;
@@ -93,6 +101,9 @@ footer{
 .btnreg:hover {
   background-color: grey;
 }
+/* bouton co et insc */
+/* bouton co et insc */
+
 
 .winner{
   color: white;
@@ -104,6 +115,9 @@ footer{
   font-family: 'Bowlby One SC', cursive;
 }
 
+
+/* Menu 3barres */
+/* Menu 3barres */
 .menu-icon {
   cursor: pointer;
   position: absolute;
@@ -157,3 +171,6 @@ footer{
 .dropdown-menu.open {
   display: block;
 }
+/* Menu 3barres */
+/* Menu 3barres */
+
