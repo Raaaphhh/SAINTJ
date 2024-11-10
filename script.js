@@ -73,12 +73,14 @@ function startAutoSlide() {
 // Start auto-slide on page load
 startAutoSlide();
 
-document.addEventListener("DOMContentLoaded", function () {
-    const menuToggle = document.getElementById("menu-toggle");
-    const menu = document.getElementById("menu");
+const menuToggle = document.getElementById('menu-toggle');
+const dropdownMenu = document.getElementById('dropdown-menu');
 
-    menuToggle.addEventListener("click", function () {
-      menu.classList.toggle("active");
-      menu.style.display = menu.style.display === "block" ? "none" : "block";
-    });
-  });
+menuToggle.addEventListener('click', () => {
+    if (dropdownMenu.style.display === 'none' || dropdownMenu.style.display === '') {
+        dropdownMenu.style.display = 'block';
+    } else {
+        dropdownMenu.style.display = 'none';
+    }
+});
+

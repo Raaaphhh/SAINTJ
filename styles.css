@@ -1,160 +1,140 @@
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-  }
-
-  body {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    min-height: 100vh;
-    background-color: #121212;
-    color: white;
-  }
-
-  header {
-    width: 100%;
-    background-color: #1a1a1a;
-    padding: 20px;
-    text-align: center;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 10;
-  }
-
-  .slideshow {
-    position: relative;
-    width: 80%;
-    max-width: 600px;
-    overflow: hidden;
-    border-radius: 10px;
-    margin-top: 150px;
-  }
-
-  .slides {
-    display: flex;
-    transition: transform 0.5s ease-in-out;
-  }
-
-  .slide {
-    min-width: 100%;
-    transition: opacity 1s ease;
-  }
-
-  .slide img {
-    width: 100%;
-    height: auto;
-    border-radius: 10px;
-  }
-
-  footer{
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    background-color: #1a1a1a;
-    padding: 10px;
-    text-align: center;
-  }
-
-  .btnco{
-    /* float: right; */
-    border: 1px solid rgb(236, 232, 232);
-    border-radius: 16px;
-    padding: 10px;
-    background-color: white;
-  }
-
-  .btnco:hover {
-    background-color: grey;
-  }
-
-  .btnreg{
-    /* float: right; */
-    border: 1px solid rgb(236, 232, 232);
-    border-radius: 16px;
-    padding: 10px;
-    /* margin-right: 40px; */
-    background-color: white;
-  }
-
-  .btnreg:hover {
-    background-color: grey;
-  }
-
-  .winner{
-    color: white;
-    font-size: 20px;
-    font-weight: bold;
-    text-align: center;
-    margin-top: 20px;
-    margin-bottom: 100px;
-  }
-
-  /* Menu Toggle Styles */
-/* Menu Toggle Styles */
-.menu-toggle {
-  cursor: pointer;
-  display: flex; /* assurez-vous que le bouton est visible */
-  flex-direction: column;
-  justify-content: space-between;
-  width: 30px;
-  height: 25px;
-  position: fixed;
-  right: 20px;
-  top: 20px;
-  z-index: 11;
-}
-
-.bar {
-  height: 4px; /* augmenter la hauteur pour mieux les voir */
-  width: 100%;
-  background-color: white; /* assurez-vous qu'elles soient visibles */
-  border-radius: 10px;
-}
-
-/* Menu Styles */
-.menu {
-  display: none;
-  position: fixed;
-  right: 0;
-  top: 0;
-  width: 200px;
-  height: 100vh;
-  background-color: #1a1a1a;
-  z-index: 10;
-  padding-top: 80px;
-  text-align: center;
-}
-
-.menu ul {
-  list-style-type: none;
+  box-sizing: border-box;
+  margin: 0;
   padding: 0;
 }
 
-.menu ul li {
-  margin: 20px 0;
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  background-color: black;
+  color: white;
 }
 
-.menu ul li a {
+header {
+  width: 100%;
+  background-color: #1a1a1a;
+  padding: 20px;
+  text-align: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+}
+
+.slideshow {
+  position: relative;
+  width: 80%;
+  max-width: 600px;
+  overflow: hidden;
+  border-radius: 10px;
+  margin-top: 150px;
+}
+
+.slides {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+  min-width: 100%;
+  transition: opacity 1s ease;
+}
+
+.slide img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+footer{
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: #1a1a1a;
+  padding: 10px;
+  text-align: center;
+}
+
+.btnco{
+  /* float: right; */
+  border: 1px solid rgb(236, 232, 232);
+  border-radius: 16px;
+  padding: 10px;
+  background-color: white;
+}
+
+.btnco:hover {
+  background-color: grey;
+}
+
+.btnreg{
+  /* float: right; */
+  border: 1px solid rgb(236, 232, 232);
+  border-radius: 16px;
+  padding: 10px;
+  /* margin-right: 40px; */
+  background-color: white;
+}
+
+.btnreg:hover {
+  background-color: grey;
+}
+
+.winner{
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 100px;
+}
+
+.menu-icon {
+  cursor: pointer;
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 24px;
+}
+
+.bar {
+  width: 30px;
+  height: 4px;
+  background-color: white;
+  border-radius: 10px;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  right: 20px;
+  top: 60px;
+  background-color: #1a1a1a;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.dropdown-menu ul {
+  list-style-type: none;
+}
+
+.dropdown-menu li {
+  margin: 10px 0;
+}
+
+.dropdown-menu a {
   color: white;
   text-decoration: none;
-  font-size: 18px;
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-  .menu-toggle {
-    display: flex;
-  }
-
-  header {
-    padding-right: 60px;
-  }
-
-  .btnco, .btnreg {
-    display: none;
-  }
+.dropdown-menu a:hover {
+  text-decoration: underline;
 }
 
