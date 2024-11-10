@@ -77,20 +77,18 @@ const menuToggle = document.getElementById('menu-toggle');
 const dropdownMenu = document.getElementById('dropdown-menu');
 
 menuToggle.addEventListener('click', (event) => {
-    event.stopPropagation(); // Empêche la propagation de l'événement pour éviter un déclenchement multiple
+    event.stopPropagation(); // Empêche la propagation de l'événement
 
-    if (dropdownMenu.style.display === 'block') {
-        dropdownMenu.style.display = 'none';
-    } else {
-        dropdownMenu.style.display = 'block';
-    }
+    // Ajoute ou supprime la classe 'open' pour gérer l'affichage
+    dropdownMenu.classList.toggle('open');
 });
 
-// Fermer le menu si on clique en dehors du menu
+// Fermer le menu si on clique en dehors
 document.addEventListener('click', (event) => {
-    if (dropdownMenu.style.display === 'block' && !menuToggle.contains(event.target)) {
-        dropdownMenu.style.display = 'none';
+    if (!menuToggle.contains(event.target) && dropdownMenu.classList.contains('open')) {
+        dropdownMenu.classList.remove('open');
     }
 });
+
 
 
