@@ -42,6 +42,11 @@ window.login = function() {
     })
     .catch((error) => {
         console.error("Erreur de connexion :", error.message);
-        alert("Échec de la connexion. Veuillez vérifier vos identifiants.");
+        if (error.code === 'auth/network-request-failed') {
+            alert("Erreur réseau : veuillez vérifier votre connexion internet.");
+        } else {
+            alert("Échec de la connexion. Veuillez vérifier vos identifiants.");
+        }
     });
+
 }
