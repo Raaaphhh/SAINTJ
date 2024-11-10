@@ -13,20 +13,39 @@
         <h3>Connexion</h3>
     </header>
 
-    <div class="connexion">
-        <!-- il faut changer la connexion par email apr username -->
-        <h4>Nom d'utilisateur</h4>
-        <input type="email" id="loginEmail" placeholder="Email">
-        <br>
-        <h4>Mot de passe</h4>
-        <input type="password" id="loginPassword" placeholder="Mot de passe">
-        <br>
-        <br>
-        <button onclick="login()">Se connecter</button>
-        <br>
-        <p>Heureux de vous revoir</p>
-    </div>
+    <form>
+        <div class="connexion">
+            <!-- il faut changer la connexion par email apr username -->
+            <div class="boxuse">
+                <input type="email" id="loginEmail" required="">
+                <label>Adresse mail</label>
+            </div>
+            <div class="boxuse">
+                <input type="password" id="loginPassword" required="">
+                <label>Mot de passe</label>
+            </div>
+            <button onclick="login()" class="btn">Se connecter</button>
+            <br>
+            <p>Heureux de vous revoir</p>
+        </div>
+    </form>
+    
+    
+    <!-- <div class="login-box">
+        <form>
+            <div class="user-box">
+                <input type="email" id="loginEmail" required="">
+                <label>Adresse mail</label>
+            </div>
+            <div class="user-box">
+                <input type="password" id="loginPassword" required="">
+                <label>Mot de passe</label>
+            </div>
+            <center><a href="#">connexion <span onclick="login()"></span></a></center>
+        </form>
+    </div> -->
     <script type="module" src="script.js"></script>
+
 
 </body>
 </html>
