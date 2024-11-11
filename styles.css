@@ -109,12 +109,12 @@ footer{
   cursor: pointer;
   position: absolute;
   right: 20px;
-  top: 20px;
+  top: 50px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   height: 24px;
-  z-index: 15; 
+  z-index: 10; 
 }
 
 .bar {
@@ -125,6 +125,7 @@ footer{
 }
 
 .dropdown-menu {
+  border: 2px solid white;
   display: none;
   position: absolute;
   right: 20px;
