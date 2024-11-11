@@ -88,13 +88,13 @@ function toggleMenu() {
 // Ajoute les gestionnaires pour les événements de clic et de touch
 menuToggle.addEventListener('click', (event) => {
     event.preventDefault();
-    event.stopPropagation();
+    // event.stopPropagation();
     toggleMenu();
 });
 
 menuToggle.addEventListener('touchstart', (event) => {
     event.preventDefault();
-    event.stopPropagation();
+    // event.stopPropagation();
     toggleMenu();
 });
 
@@ -106,11 +106,11 @@ document.addEventListener('click', (event) => {
 });
 
 // Fermer le menu si on touche en dehors (pour les mobiles)
-document.addEventListener('touchstart', (event) => {
-    if (!menuToggle.contains(event.target) && dropdownMenu.classList.contains('open')) {
-        dropdownMenu.classList.remove('open');
-    }
-});
+// document.addEventListener('touchstart', (event) => {
+//     if (!menuToggle.contains(event.target) && dropdownMenu.classList.contains('open')) {
+//         dropdownMenu.classList.remove('open');
+//     }
+// });
 
 
 
