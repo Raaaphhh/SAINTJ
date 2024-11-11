@@ -106,11 +106,11 @@ document.addEventListener('click', (event) => {
 });
 
 // Fermer le menu si on touche en dehors (pour les mobiles)
-// document.addEventListener('touchstart', (event) => {
-//     if (!menuToggle.contains(event.target) && dropdownMenu.classList.contains('open')) {
-//         dropdownMenu.classList.remove('open');
-//     }
-// });
+document.addEventListener('touchstart', (event) => {
+    if (!menuToggle.contains(event.target) && dropdownMenu.classList.contains('open')) {
+        dropdownMenu.classList.remove('open');
+    }
+});
 
 
 
