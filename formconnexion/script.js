@@ -34,19 +34,16 @@ window.login = function() {
     const email = document.getElementById('loginEmail').value;
     const password = document.getElementById('loginPassword').value;
 
+    console.log("Email saisi :", email);
+    console.log("Mot de passe saisi :", password);
+
     signInWithEmailAndPassword(auth, email, password)
     .then((userCredential) => {
         console.log("Connexion réussie :", userCredential.user);
-        // Redirection vers la page de classement après connexion réussie
         window.location.href = '../Pagemenu/pagemenu.html';
     })
     .catch((error) => {
         console.error("Erreur de connexion :", error.message);
-        if (error.code === 'auth/network-request-failed') {
-            alert("Erreur réseau : veuillez vérifier votre connexion internet.");
-        } else {
-            alert("Échec de la connexion. Veuillez vérifier vos identifiants.");
-        }
+        alert("Échec de la connexion. Veuillez vérifier vos identifiants.");
     });
-
-}
+};
