@@ -8,9 +8,9 @@
     <title>Inscritpion</title>
 </head>
 <body>
-    <div class="connexion">
+    <!-- <div class="connexion">
         <h2>Créer un compte</h2>
-        <!-- fait le JS pour recevoir l'username -->
+         fait le JS pour recevoir l'username 
         <input type="text" id="username" placeholder="Username">  
         <br>
         <br>
@@ -21,6 +21,34 @@
         <br>
         <br>
         <button onclick="register()">S'inscrire</button>
-    </div>
+    </div> -->
+
+    <header>
+        <h1>SAINT - J</h1>
+        <h3>Connexion</h3>
+    </header>
+
+    <form>
+        <div class="insc">
+            <div class="boxuse">
+                <input type="text" id="username" required="">
+                <label>Username</label>
+            </div>
+            <div class="boxuse">
+                <input type="email" id="registerEmail" required="">
+                <label>Adresse mail</label>
+            </div>
+            <div class="boxuse">
+                <input type="password" id="registerPassword" required="">
+                <label>Mot de passe</label>
+            </div>
+            <div class="checkbox">
+                <input type="checkbox" id="checkbox">En cochant cette case vous accepter de vous engager a respecter le <a href="">contrat de participation au saint - j</a></input>
+            </div>
+            <button onclick="register()" class="btn" type="button">Inscription</button>
+            <p>Heureux de vous rencontrer</p>
+        </div>
+    </form>
+
 </body>
 </html>
