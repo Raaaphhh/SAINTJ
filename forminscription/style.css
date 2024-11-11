@@ -23,7 +23,7 @@ header{
     left: 50%;
     width: 300px;
     padding: 40px;
-    margin-top: 50px;
+    margin-top: 140px;
     transform: translate(-50%, -50%);
     background: rgba(24, 20, 20, 0.987);
     box-sizing: border-box;
@@ -80,7 +80,6 @@ header{
     transition: background 0.3s ease;
     font-family: 'Bowlby One SC', cursive;
     border: 2px solid white;
-
 }
 
 .btn:hover{
