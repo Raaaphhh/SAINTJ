@@ -1,4 +1,4 @@
-#bouton-personnalise {
+.bouton-personnalise1 {
     cursor: pointer;  /* Change le curseur pour montrer que c'est cliquable */
     transition: transform 0.2s;  /* Ajoute une légère animation pour donner du feedback */
     display: block;
@@ -7,6 +7,7 @@
     width: 100px;
 }
 
-#bouton-personnalise:hover {
+.bouton-personnalise1:hover {
     transform: scale(1.1);  /* Agrandit légèrement le bouton lorsqu'on passe la souris dessus */
 }
+
