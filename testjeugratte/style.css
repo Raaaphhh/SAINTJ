@@ -3,7 +3,6 @@
     transition: transform 0.2s;  /* Ajoute une légère animation pour donner du feedback */
     display: block;
     margin: 0 auto;  /* Centre horizontalement */
-    text-align: center;  /* Centre le contenu à l'intérieur du bouton */
     width: 100px;
 }
 
@@ -11,3 +10,12 @@
     transform: scale(1.1);  /* Agrandit légèrement le bouton lorsqu'on passe la souris dessus */
 }
 
+#ticket{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 20%;
+    height: 70%;
+    z-index: -1;
+}
