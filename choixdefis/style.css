@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Bowlby+One+SC&family=Bree+Serif&display=swap');
+
+
+header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #1a1a1a;
+    color: white;
+    z-index: 1000;
+    font-family: "Bowlby One SC", cursive;
+}
+
+body {
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+
+#ticket {
+    display: block;
+    margin: 0 auto;
+    position: relative;
+    width: 250px;  /* Ajustez la taille en fonction de votre image */
+}
+
+.ticketagratter {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 250px;  /* Même taille que l'image pour le conteneur */
+    margin: 0 auto;
+    margin-top: 190px;
+}
+
+.bouton-personnalise1, 
+.bouton-personnalise2, 
+.bouton-personnalise3, 
+.bouton-personnalise4 {
+    position: absolute;
+    margin-top: 97px;
+    width: 120px;  /* Taille des boutons */
+    cursor: pointer;
+    transition: transform 0.2s;
+
+}
+
+#btn1 {
+    top: 30%;
+    transform: translateY(-50%);
+}
+
+#btn2 {
+    top: 41%;
+    transform: translateY(-50%);
+}
+
+#btn3 {
+    top: 52%;
+    transform: translateY(-50%);
+}
+
+#btn4 {
+    top: 63%;
+    transform: translateY(-50%);
+}
+
+.bouton-personnalise1:hover, 
+.bouton-personnalise2:hover, 
+.bouton-personnalise3:hover, 
+.bouton-personnalise4:hover {
+    transform: translateY(-50%) scale(1.1) !important;
+}
+
+#btn1:hover, 
+#btn2:hover, 
+#btn3:hover, 
+#btn4:hover {
+    transform: scale(1.1);
+}
+
+
