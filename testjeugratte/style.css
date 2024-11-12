@@ -1,0 +1,12 @@
+#bouton-personnalise {
+    cursor: pointer;  /* Change le curseur pour montrer que c'est cliquable */
+    transition: transform 0.2s;  /* Ajoute une légère animation pour donner du feedback */
+    display: block;
+    margin: 0 auto;  /* Centre horizontalement */
+    text-align: center;  /* Centre le contenu à l'intérieur du bouton */
+    width: 100px;
+}
+
+#bouton-personnalise:hover {
+    transform: scale(1.1);  /* Agrandit légèrement le bouton lorsqu'on passe la souris dessus */
+}
