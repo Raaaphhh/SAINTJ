@@ -1,2 +1,0 @@
-Page defis : 
-- (optionel) ajouter une animation sur la difficulté du defis (facile, moyen ...) pour voir les points correspondant
