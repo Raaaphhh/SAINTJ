@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Bowlby+One+SC&family=Bree+Serif&display=swap');
+
+header {
+    width: 100%;
+    background-color: #1a1a1a;
+    padding: 10px;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    font-family: "Bowlby One SC", cursive;
+
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: black;
+    color: white;
+    margin-top: 80px; /* Adjust this value as needed */
+}
+
+.text {
+    border: #ffffff 2px solid;
+    font-family: "Bowlby One SC", cursive;
+    font-size: small;
+    border-radius: 10px;
+    padding: 10px;
+    background-color: #1a1a1a;
+    margin-top: 100px;
+}
