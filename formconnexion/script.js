@@ -40,6 +40,7 @@ window.login = function() {
     signInWithEmailAndPassword(auth, email, password)
     .then((userCredential) => {
         console.log("Connexion réussie :", userCredential.user);
+        alert("Connexion réussie !");
         window.location.href = '../Pagemenu/pagemenu.html';
     })
     .catch((error) => {
