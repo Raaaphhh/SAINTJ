@@ -77,6 +77,7 @@ const menuToggle = document.getElementById('menu-toggle');
 const dropdownMenu = document.getElementById('dropdown-menu');
 
 // Fonction pour gérer l'affichage du menu
+// Fonction pour gérer l'affichage du menu
 function toggleMenu() {
     if (dropdownMenu.classList.contains('open')) {
         dropdownMenu.classList.remove('open');
@@ -88,29 +89,35 @@ function toggleMenu() {
 // Ajoute les gestionnaires pour les événements de clic et de touch
 menuToggle.addEventListener('click', (event) => {
     event.preventDefault();
-    // event.stopPropagation();
+    event.stopPropagation(); // Empêche la propagation de l'événement pour éviter la fermeture immédiate
     toggleMenu();
 });
 
 menuToggle.addEventListener('touchstart', (event) => {
     event.preventDefault();
-    // event.stopPropagation();
+    event.stopPropagation(); // Empêche la propagation de l'événement pour éviter la fermeture immédiate
     toggleMenu();
+});
+
+// Empêche la fermeture lorsque vous cliquez à l'intérieur du menu
+dropdownMenu.addEventListener('click', (event) => {
+    event.stopPropagation(); // Empêche la fermeture si un lien est cliqué dans le menu
 });
 
 // Fermer le menu si on clique en dehors
 document.addEventListener('click', (event) => {
-    if (!menuToggle.contains(event.target) && dropdownMenu.classList.contains('open')) {
+    if (!menuToggle.contains(event.target) && !dropdownMenu.contains(event.target) && dropdownMenu.classList.contains('open')) {
         dropdownMenu.classList.remove('open');
     }
 });
 
 // Fermer le menu si on touche en dehors (pour les mobiles)
 document.addEventListener('touchstart', (event) => {
-    if (!menuToggle.contains(event.target) && dropdownMenu.classList.contains('open')) {
+    if (!menuToggle.contains(event.target) && !dropdownMenu.contains(event.target) && dropdownMenu.classList.contains('open')) {
         dropdownMenu.classList.remove('open');
     }
 });
+
 
 
 
