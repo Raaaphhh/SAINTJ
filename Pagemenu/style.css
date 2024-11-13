@@ -61,3 +61,19 @@ header h1, header h2 {
     font-size: xx-small;
     color: gray;
 }
+
+
+.btnreg{
+    /* float: right; */
+    border: 3px solid black;
+    color: black;
+    border-radius: 16px;
+    padding: 10px;
+    /* margin-right: 40px; */
+    background-color: white;
+    font-family: 'Bowlby One SC', cursive;
+  }
+  
+  .btnreg:hover {
+    background-color: grey;
+  }
