@@ -42,7 +42,6 @@ window.login = function() {
         console.log("Connexion réussie :", userCredential.user);
         window.location.href = '../Pagemenu/pagemenu.html';
         alert("Connexion réussie !");
-
     })
     .catch((error) => {
         console.error("Erreur de connexion :", error.message);
